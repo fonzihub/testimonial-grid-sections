@@ -7,11 +7,22 @@ body {
 }
 
 main {
+  max-width: 305px;
   margin: auto;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+}
+@media screen and (min-width: 431px) {
+  main {
+    max-width: 415px;
+  }
+}
+@media (min-width: 768px) {
+  main {
+    max-width: none;
+    padding: 5%;
+    display: grid;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+  }
 }
 
 .card {
@@ -19,7 +30,6 @@ main {
   font-family: "Barlow Semi Condensed", "Courier New", Courier, monospace;
   margin-bottom: 32px;
   border-radius: 8px;
-  max-width: 305px;
 }
 .card header {
   display: flex;
@@ -53,6 +63,11 @@ main {
   background-color: hsl(263, 55%, 52%);
   color: #FFFFFF;
 }
+@media (min-width: 768px) {
+  .daniel {
+    grid-column: span 2;
+  }
+}
 
 .jonathan {
   background-color: hsl(217, 19%, 35%);
@@ -68,8 +83,18 @@ main {
   background-color: #19202D;
   color: #FFFFFF;
 }
+@media (min-width: 768px) {
+  .patrick {
+    grid-column: span 2;
+  }
+}
 
 .kira {
   background-color: #FFFFFF;
   color: hsl(217, 19%, 35%);
+}
+@media (min-width: 768px) {
+  .kira {
+    grid-column: span 2;
+  }
 }/*# sourceMappingURL=app.css.map */

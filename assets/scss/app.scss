@@ -38,19 +38,30 @@ $spacing40: 40px;
 body{
     background-color: $grey100;
 }
-main{
-    margin:auto;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+
+main {
+    
+  max-width: 305px;
+  margin: auto;
+
+  @media screen and (min-width: 431px) {
+    max-width: 415px; 
+  }
+  @include tablet {
+    max-width: none;
+    padding:5%;
+    display: grid;
+    column-gap: $spacing32;
+  }
 }
+
 .card{
 padding:$spacing32;
 font-family: 'Barlow Semi Condensed', 'Courier New', Courier, monospace;
 margin-bottom: $spacing32;
 border-radius: $spacing8;
-max-width: 305px;
+ 
+
 
 header{
     display: flex;
@@ -84,6 +95,9 @@ strong{
 .daniel{
     background-color: hsl(263, 55%, 52%);
     color: #FFFFFF;
+    @include tablet {
+        grid-column: span 2 ;
+    }
 }
 .jonathan{
     background-color: $grey500;
@@ -97,8 +111,14 @@ strong{
 .patrick{
         background-color: $darkBlue;
         color: #FFFFFF;
+        @include tablet {
+        grid-column: span 2 ;
+    }
 }
 .kira{
     background-color: #FFFFFF;
     color:$grey500;
+    @include tablet {
+        grid-column: span 2 ;
+    }
 }
