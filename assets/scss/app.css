@@ -24,6 +24,12 @@ main {
          column-gap: 32px;
   }
 }
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, min-content);
+  }
+}
 
 .card {
   padding: 32px;

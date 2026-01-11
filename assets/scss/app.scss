@@ -53,6 +53,11 @@ main {
     display: grid;
     column-gap: $spacing32;
   }
+  @include desktop{
+    // row-gap: $spacing16;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, min-content);
+  }
 }
 
 .card{
