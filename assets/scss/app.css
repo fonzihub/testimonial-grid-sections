@@ -29,6 +29,9 @@ main {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto;
     row-gap: 16px;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
   }
 }
 
